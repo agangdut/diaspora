@@ -1,0 +1,13 @@
+{{> header}}
+
+<main>
+ {{#foreach posts}}
+ <h1>{{title}}</h1>
+ <h4>{{post}}</h4>
+ {{/foreach}}
+</main>
+
+<!-- Pagination block -->
+{{pagination}}
+
+{{> footer}}

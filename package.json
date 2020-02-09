@@ -1,0 +1,77 @@
+{
+    "name": "diaspora",
+    "description": "The offical Diaspora theme created by Agang Dut with the header blog post, the featured post and other seperated blog post by groups",
+    "demo": "https://TechwithDut.com",
+    "version": "1.0.0",
+    "engines": {
+        "ghost": ">=3.0.0",
+        "ghost-api": "v3"
+    },
+    "license": "MIT",
+    "screenshots": {
+        "desktop": "assets/screenshot-desktop.jpg",
+        "mobile": "assets/screenshot-mobile.jpg"
+    },
+    "scripts": {
+        "dev": "gulp",
+        "zip": "gulp zip",
+        "test": "gscan .",
+        "test:ci": "gscan --fatal --verbose .",
+        "pretest": "gulp build",
+        "preship": "yarn test",
+        "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; else echo \"Uncomitted changes found.\" && exit 1; fi",
+        "postship": "git fetch && gulp release"
+    },
+    "author": {
+        "name": "Agang Dut",
+        "email": "agangdut@gmail.com",
+        "url": "https://TechwithDut.com"
+    },
+    "gpm": {
+        "type": "theme",
+        "categories": [
+            "blog"
+        ]
+    },
+    "keywords": [
+        "ghost",
+        "theme",
+        "ghost-theme"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/thejokester1/diaspora"
+    },
+    "bugs": "https://github.com/thejokester1/diaspora/issues",
+    "contributors": "https://github.com/thejokester1/diaspora/graphs/contributors",
+    "devDependencies": {},
+    "browserslist": [
+        "defaults"
+    ],
+    "config": {
+        "posts_per_page": 1,
+        "image_sizes": {
+            "xxs": {
+                "width": 30
+            },
+            "xs": {
+                "width": 100
+            },
+            "s": {
+                "width": 300
+            },
+            "m": {
+                "width": 600
+            },
+            "l": {
+                "width": 1000
+            },
+            "xl": {
+                "width": 2000
+            }
+        }
+    },
+    "dependencies": {
+        "gulp": "^4.0.2"
+    }
+}
