@@ -1,28 +1,44 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <!--[if lte IE 9]>
-        <script type="text/javascript">
-            window.location = "/browser-compatibility";
-        </script>
-        <![endif]-->
-        <title>{{meta_title}}</title>
-        {{ghost_head}}
-        {{> meta}}
-        <link rel="stylesheet" type="text/scss" href="{{asset "sass/themes.scss"}}" />
+﻿<!doctype html>
+<html class="default" lang="{{@site.lang}}">
 
-    </head>
-    <body class="{{body_class}}">
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{! Place favicon.ico in the asset directory }}
+    {{!-- <link rel="shortcut icon" href="{{asset "/favicon.ico"}}"> --}}
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" href="{{asset "assets/css/header.css"}}">
+    <link rel="stylesheet" href="{{asset "assets/css/footer.css"}}">
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+
+<body class="{{body_class}}">
+    <!--[if lt IE 8]>
+          <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+          <![endif]-->
+    {{! Everything else gets inserted here }}
+
+    <header id="header">
         {{> header}}
+    </header>
 
-        <main class="animated">
-            <section class="content">
-                {{{body}}}
-                {{> footer}}
-            </section>
-        </main>
-        {{> tags-overlay}}
-        {{ghost_foot}}
+    <div id="container">
+        {{{body}}}
+    </div>
 
-    </body>
+    {{! Footer }}
+    <footer id="footer">
+        {{> footer}}
+    </footer>
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+    <script src={{asset "assets/js/header.js"}}></script>
+</body>
 </html>

@@ -1,13 +1,64 @@
-{{> header}}
+{{!< default}}
+<link rel="stylesheet" href="{{asset "assets/css/banner.css"}}">
+<link rel="stylesheet" href="{{asset "assets/css/index.css"}}">
+{{#is "tag"}}
+{{> tag}}
+{{/is}}
+{{#is "home"}}
+{{> banner}}
+<script src="assets/js/banner.js"></script>
+{{#foreach posts limit="1"}}
+<div class="content-container" style="align-content: center;">
+    <div class="content">
+    <h1 class="title" style=" color: white; display: inline-block; text-align: left; ">
+        {{title}}
+    </h1>
+    <div class="content">
+        <div class="post-info-container">
+            <p class="date" style="color: lightblue; float: left;">
+                Published on
+                {{date published_at format="MMMM DD, YYYY"}}
+            </p>
+            <p class="tag" style="color: green; float: right;">
+                {{tags}}
+            </p>
+            </div>
+            <br/>
+            {{content}}
+        </div>
+        </div>
+</div>
+{{/foreach}}
+<div class="next-post" style="text-align: center; background-color: black; color: white;
+text-decoration: none; text-decoration-color: white !important;">
+    {{pagination}}
+</div>
+{{else}}
+{{#foreach posts limit="1"}}
 
-<main>
- {{#foreach posts}}
- <h1>{{title}}</h1>
- <h4>{{post}}</h4>
- {{/foreach}}
-</main>
+<div class="content-container">
+    <div class="content">
+        <h1 class="title" style=" color: white; display: inline-block; text-align: center;
+        background-color: black;
+        color: white;">
+            {{title}}
+        </h1>
 
-<!-- Pagination block -->
-{{pagination}}
-
-{{> footer}}
+        <div class="post-info-container">
+            <p class="date" style="color: lightblue; float: left;">
+                Published on
+                {{date published_at format="MMMM DD, YYYY"}}
+            </p>
+            <p class="tag" style="float: right;">
+                {{tags}}
+            </p>
+    </div>
+    <br/>
+        {{content}}
+    </div>
+</div>
+{{/foreach}}
+<div class="next-post" style="text-align: center; background-color: black; color: white; text-decoration: none; text-decoration-color: white;">
+    {{pagination}}
+</div>
+{{/is}}
