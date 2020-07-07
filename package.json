@@ -45,7 +45,7 @@
     "gulp-connect": "5.7.0",
     "gulp-postcss": "8.0.0",
     "headroom.js": "^0.11.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lozad": "^1.14.0",
     "medium-zoom": "^1.0.5",
     "shave": "^2.5.7",
