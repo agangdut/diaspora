@@ -1,6 +1,2 @@
-newghoststuff/*
-!newghoststuff/content/themes/diaspora/.gitkeep
-!newghoststuff/content/themes/diaspora/dist/.gitkeep
-!newghoststuff/content/themes/diaspora/sass/.gitkeep
-!newghoststuff/content/themes/diaspora/assets/.gitkeep
-!newghoststuff/content/themes/diaspora/partials/.gitkeep
+/*
+/diaspora/newghoststuff/content/themes/diaspora/*
