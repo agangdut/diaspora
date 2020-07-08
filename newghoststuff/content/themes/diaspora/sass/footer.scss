@@ -1,0 +1,39 @@
+.footer-content {
+    text-align: center;
+    background-color: black;
+    vertical-align: central;
+    flex-shrink: 0;
+    padding: 30px ;
+}
+
+p {
+    color: white;
+}
+
+.link-names {
+    color: lightgreen;
+    text-decoration: none;
+    direction: initial;
+}
+
+@media screen and (max-width: 863px) {
+
+    p span {
+        display: block;
+        line-height: 30px;
+    }
+
+    p {
+        color: white;
+    }
+
+    .bull {
+        display: none;
+    }
+
+    .link-names {
+        color: lightgreen;
+        text-decoration: none;
+        direction: initial;
+    }
+}

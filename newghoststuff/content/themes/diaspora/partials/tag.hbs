@@ -1,0 +1,17 @@
+{{!< default}}
+
+{{#tag}}
+<div class="container" style="text-align: center; background-color: black;">
+    <h1 class="title" style="display: inline-block; color: lightgreen;">
+        {{name}}
+    </h1>
+    <div style="color: lightblue">
+        {{description}}
+    </div>
+    <div class="tag-cards">
+        {{#foreach 'posts'}}
+
+        {{/foreach}}
+    </div>
+</div>
+{{/tag}}

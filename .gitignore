@@ -1,2 +1,13 @@
-/*
-/diaspora/newghoststuff/content/themes/diaspora/*
+newghoststuff/current
+newghoststuff/versions
+.ghost-cli
+.ghostpid
+config.development.json
+newghoststuff/content/apps
+newghoststuff/content/data
+newghoststuff/content/images
+newghoststuff/content/logs
+newghoststuff/content/settings
+newghoststuff/content/themes/.vscode
+newghoststuff/content/themes/casper
+node_modules
